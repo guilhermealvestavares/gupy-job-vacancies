@@ -1,6 +1,6 @@
 import { getVacancies } from "services/vacanciesService";
 import { useEffect, useState } from "react";
-import { Checkbox } from "components";
+import { Skills } from "steps";
 
 export const Homepage = () => {
   const [allVacancies, setAllVacancies] = useState([]);
@@ -14,7 +14,7 @@ export const Homepage = () => {
   console.log(allVacancies);
   return (
     <>
-      <p>homepage aqui</p>
+      <Skills />
     </>
   );
 };
