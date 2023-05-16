@@ -1,6 +1,6 @@
 import { getVacancies } from "services/vacanciesService";
 import { useEffect, useState } from "react";
-import { Skills } from "steps";
+import { Skills, Roles } from "steps";
 
 export const Homepage = () => {
   const [allVacancies, setAllVacancies] = useState([]);
@@ -14,6 +14,7 @@ export const Homepage = () => {
   console.log(allVacancies);
   return (
     <>
+      <Roles />
       <Skills />
     </>
   );
