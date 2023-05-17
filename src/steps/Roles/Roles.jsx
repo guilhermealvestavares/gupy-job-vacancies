@@ -6,7 +6,7 @@ import { normalizeRole } from "shared/utils/normalizeRole";
 export const Roles = () => {
   const [role, setRole] = useState([]);
 
-  const handleRoleClick = (rolePicked) => {
+  const handlerRoleClick = (rolePicked) => {
     const normalizedRole = normalizeRole(rolePicked);
     role.find((item) => item === normalizedRole)
       ? setRole(role.filter((item) => item !== normalizedRole))
@@ -25,7 +25,7 @@ export const Roles = () => {
             value={item}
             name="role"
             onClick={() => {
-              handleRoleClick(item);
+              handlerRoleClick(item);
             }}
           />
         ))}
