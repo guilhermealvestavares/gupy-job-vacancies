@@ -7,11 +7,10 @@ export const Roles = () => {
   const [role, setRole] = useState([]);
 
   const handleRoleClick = (rolePicked) => {
-    if (role.find((item) => item === normalizeRole(rolePicked))) {
-      setRole(role.filter((item) => item !== normalizeRole(rolePicked)));
-    } else {
-      setRole([...role, normalizeRole(rolePicked)]);
-    }
+    const normalizedRole = normalizeRole(rolePicked);
+    role.find((item) => item === normalizedRole)
+      ? setRole(role.filter((item) => item !== normalizedRole))
+      : setRole([...role, normalizedRole]);
   };
 
   useEffect(() => {
