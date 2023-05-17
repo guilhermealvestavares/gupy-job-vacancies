@@ -8,7 +8,7 @@ export const Homepage = () => {
     async function fetchInformations() {
       setAllVacancies(await getVacancies("front-end", 10));
     }
-    fetchInformations();
+    // fetchInformations();
   }, []);
 
   console.log(allVacancies);

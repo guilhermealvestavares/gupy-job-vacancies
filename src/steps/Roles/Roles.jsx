@@ -7,7 +7,11 @@ export const Roles = () => {
   const [role, setRole] = useState([]);
 
   const handleRoleClick = (rolePicked) => {
-    setRole([...role, normalizeRole(rolePicked)]);
+    if (role.find((item) => item === normalizeRole(rolePicked))) {
+      setRole(role.filter((item) => item !== normalizeRole(rolePicked)));
+    } else {
+      setRole([...role, normalizeRole(rolePicked)]);
+    }
   };
 
   useEffect(() => {
@@ -16,7 +20,6 @@ export const Roles = () => {
   return (
     <>
       <Wrapper>
-        <Title>Qual a sua área de atuação?</Title>
         {techsList.role.map((item) => (
           <CheckboxStyled
             text={item}
