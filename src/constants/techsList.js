@@ -1,5 +1,5 @@
 export const techsList = {
-  role: ["Front-end", "Back-end", "FullStack"],
+  role: ["Front-end", "Back-end", "FullStack", "DevOps", "Mobile"],
   frontend: [
     "HTML",
     "CSS",
@@ -34,7 +34,7 @@ export const techsList = {
     "C#/.NET",
     "Scala",
   ],
-  cloud: [
+  devops: [
     "Amazon Web Services (AWS)",
     "Microsoft Azure",
     "Google Cloud Platform (GCP)",
