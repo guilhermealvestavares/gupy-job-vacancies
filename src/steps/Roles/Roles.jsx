@@ -16,7 +16,7 @@ export const Roles = () => {
   return (
     <Wrapper>
       <Title>Qual a sua área de atuação?</Title>
-      {techsList.role.map((item) => (
+      {techsList?.roles?.map((item) => (
         <CheckboxStyled
           key={item}
           text={item}

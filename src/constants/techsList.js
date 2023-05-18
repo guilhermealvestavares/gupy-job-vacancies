@@ -1,5 +1,5 @@
 export const techsList = {
-  role: ["Front-end", "Back-end", "FullStack", "DevOps", "Mobile"],
+  roles: ["Front-end", "Back-end", "FullStack", "DevOps", "Mobile"],
   frontend: [
     "HTML",
     "CSS",
@@ -63,4 +63,5 @@ export const techsList = {
     "Onsen UI",
     "Intel XDK",
   ],
+  fullstack: ["teste"],
 };

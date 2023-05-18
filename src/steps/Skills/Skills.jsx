@@ -12,12 +12,16 @@ export const Skills = () => {
 
   return (
     <>
-      <Wrapper>
-        <Title>Quais tecnologias você domina?</Title>
-        {techsList.frontend.map((item) => (
-          <CheckboxStyled key={item} text={item} value={item} name={item} />
-        ))}
-      </Wrapper>
+      {role?.map((rolePicked) => {
+        return (
+          <Wrapper>
+            <Title>Quais tecnologias {rolePicked} você domina?</Title>
+            {techsList?.[rolePicked].map((item) => (
+              <CheckboxStyled key={item} text={item} value={item} name={item} />
+            ))}
+          </Wrapper>
+        );
+      })}
     </>
   );
 };
